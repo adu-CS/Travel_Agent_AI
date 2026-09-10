@@ -18,7 +18,7 @@ RUN mkdir -p outputs
 
 EXPOSE 8000
 
-# 4 workers is a reasonable default; tune based on your container's CPU allocation
+# 4 workers 
 CMD ["gunicorn", "app.main:app", \
      "-k", "uvicorn.workers.UvicornWorker", \
      "-w", "4", \
